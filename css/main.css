@@ -1,0 +1,127 @@
+body,
+body * {
+margin: 0;
+padding: 0;
+vertical-align: top;
+box-sizing: border-box;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+}
+
+body{
+    background-color:  white;
+}
+
+main{
+    width: 1000px;
+    margin-left: calc((100% - 1000px) / 2);
+    background-color: rgb(195, 204, 157);
+}
+
+header{
+    width: 1000px;
+    height: 50px;
+    float: left;
+    display: inline-block;
+    /* background-color: brown; */
+}
+
+header > img{
+    margin-top: 0;
+    height: 40px;
+    float: left;
+    display: inline-block;
+}
+
+/* first and last wordf diffrent */
+header > h2{
+    margin-top: 10px;
+    line-height: 40px;
+    font-size: 16px;
+    
+    color: black;
+    float: left;
+    display: inline-block;
+    font-family: Arial;
+}
+
+
+header > right
+{
+    display: inline-block;
+    float: right;
+}
+
+/* diffrent last and first element */
+header > right > a{
+    margin-left: 20px;
+    margin-top: 10px;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: Arial;
+    /* background-color: blueviolet; */
+    float: left;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+
+page-main{
+    width: 1000px;
+}
+
+/* left */
+
+page-main > left{
+    margin-top: 100px;
+    margin-left: 0%;
+    float: left;
+    display: inline-block;
+    width: 40%;
+}
+
+page-main > left > h1{
+    float: left;
+    display: inline-block;
+    width: 100%;
+
+    font-family: Arial;
+    line-height: 40px;
+    font-size: 36px;
+}
+
+page-main > left > p{
+    float: left;
+    display: inline-block;
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+page-main > left > a{
+    float: left;
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+
+    color: white;
+    text-decoration: none;
+    background-color: darkorange;
+}
+
+/* right */
+
+page-main > right{
+    float: right;
+    display: inline-block;
+    width: 50%;
+}
+
+page-main > right > img{
+    width: 500px;
+}
