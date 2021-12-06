@@ -1,10 +1,19 @@
+:root{
+    --MyOrange: #ff4622; 
+    --plotis: 1000px;
+    --soninis-atstumas: calc((100% - var(--plotis)) / 2);
+    --main-width: calc(100% - var(--soninis-atstumas));
+    --text-width: calc(var(--plotis) * 0.4);
+    --text-margin: calc(var(--plotis) * 0.1);
+    --image-width: calc(var(--plotis) * 0.5 + var(--soninis-atstumas));
+}
+
 body,
 body * {
 margin: 0;
 padding: 0;
 vertical-align: top;
 box-sizing: border-box;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
 }
 
 body{
@@ -12,13 +21,13 @@ body{
 }
 
 main{
-    width: 1000px;
-    margin-left: calc((100% - 1000px) / 2);
+    width: var(--main-width);
+    margin-left: var(--soninis-atstumas);
     background-color: rgb(195, 204, 157);
 }
 
 header{
-    width: 1000px;
+    width: var(--plotis);
     height: 50px;
     float: left;
     display: inline-block;
@@ -39,11 +48,14 @@ header > h2{
     font-size: 16px;
     
     color: black;
+    font-family: cursive;
     float: left;
     display: inline-block;
-    font-family: Arial;
 }
 
+header > h2 > ok{
+    color: var(--MyOrange);
+}
 
 header > right
 {
@@ -57,16 +69,29 @@ header > right > a{
     margin-top: 10px;
     line-height: 30px;
     font-size: 20px;
-    font-family: Arial;
+    font-family: cursive;
     /* background-color: blueviolet; */
     float: left;
     display: inline-block;
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+
+header > right > a:hover{
+    border-bottom: 3px solid red;
+}
+
+header > right > a:first-child{
+    margin-left: 0px;
+    border-bottom: 3px solid red;
+}
+
+header > right > a:last-child{
 }
 
 page-main{
-    width: 1000px;
+    width: var(main-width);
 }
 
 /* left */
@@ -84,9 +109,13 @@ page-main > left > h1{
     display: inline-block;
     width: 100%;
 
-    font-family: Arial;
+    font-family: cursive;
     line-height: 40px;
     font-size: 36px;
+}
+
+page-main > left > h1 > span {
+    color: var(--MyOrange);
 }
 
 page-main > left > p{
@@ -111,7 +140,15 @@ page-main > left > a{
 
     color: white;
     text-decoration: none;
-    background-color: darkorange;
+    background-color: var(--MyOrange);
+    border-radius: 10px;
+    border: 3px solid rgb(39, 27, 11);
+}
+
+page-main > left > a:hover{
+    background-color: white;
+    color: var(--MyOrange);
+    border: 3px solid rgb(39, 27, 11);
 }
 
 /* right */
